@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raynichelle Domingo — Ecommerce Specialist</title>
+<style>
+  :root{
+    --cream: #FBF7F1;
+    --cream-2: #F5EFE6;
+    --ink: #2B1D28;
+    --ink-soft: #5C4F58;
+    --plum: #6E2E4B;
+    --plum-dark: #4A1E33;
+    --rose: #F3D8D8;
+    --sage: #DCE8DC;
+    --sky: #DCE6F0;
+    --clay: #F0DFC9;
+    --border: #E7DDD0;
+    --radius: 14px;
+  }
+
+  *{ box-sizing: border-box; margin:0; padding:0; }
+
+  body{
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
+  h1,h2,h3, .brand-name{
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--plum-dark);
+  }
+
+  a{ color: inherit; text-decoration: none; }
+
+  img{ max-width:100%; display:block; }
+
+  .container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* HEADER */
+  header{
+    background: var(--cream);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    gap: 64px;
+    padding: 20px 24px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .brand-name{
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 1;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background: var(--sage);
+    color: #2F5233;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+  }
+  .badge .dot{
+    width:6px; height:6px; border-radius:50%; background:#3E8E4A;
+    display:inline-block;
+  }
+  nav{ display:flex; gap: 26px; font-family: Arial, sans-serif; font-size: 0.95rem; }
+  nav a{ color: var(--ink-soft); transition: color .2s; }
+  nav a:hover{ color: var(--plum); }
+  .nav-toggle{ display:none; }
+
+  /* CONTACT BAR */
+  .contact-bar{
+    background: var(--plum);
+    color: #F3E3EC;
+  }
+  .contact-bar-inner{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 10px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 34px;
+    flex-wrap: wrap;
+    font-family: Arial, sans-serif;
+    font-size: 0.88rem;
+  }
+  .contact-item{
+    display:flex;
+    align-items:center;
+    gap: 8px;
+    color: #F3E3EC;
+  }
+  .contact-item .c-icon{
+    color: #E7B8CE;
+    font-size: 0.95rem;
+    line-height: 1;
+  }
+  .contact-item a{ color: #F3E3EC; }
+  .contact-item a:hover{ text-decoration: underline; }
+
+  /* HERO */
+  .hero-section{ padding: 56px 24px 40px; }
+  .hero-card{
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 56px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  }
+  .pill-row{ display:flex; gap:10px; margin-bottom: 22px; flex-wrap: wrap; }
+  .pill{
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+  .pill.pink{ background: var(--rose); color: #8A3B57; }
+  .pill.grey{ background: #ECE7E1; color: #6B5F66; }
+
+  .hero-card h1{
+    font-size: 2.6rem;
+    line-height: 1.2;
+    margin-bottom: 22px;
+    max-width: 720px;
+  }
+  .hero-card p.lede{
+    font-family: Arial, sans-serif;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+    max-width: 620px;
+    margin-bottom: 30px;
+  }
+  .btn-row{ display:flex; gap: 14px; flex-wrap: wrap; }
+  .btn{
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 13px 26px;
+    border-radius: 8px;
+    display:inline-block;
+    transition: opacity .2s, transform .15s;
+    cursor:pointer;
+    border: none;
+  }
+  .btn:hover{ transform: translateY(-1px); }
+  .btn-primary{ background: var(--plum); color: #fff; }
+  .btn-primary:hover{ background: var(--plum-dark); }
+  .btn-secondary{ background: #fff; color: var(--ink); border: 1px solid var(--border); }
+  .btn-secondary:hover{ border-color: var(--plum); }
+
+  /* GENERIC SECTION CARD */
+  section.panel{ padding: 20px 24px 56px; }
+  .panel-card{
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 44px 56px;
+  }
+  .section-title{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
+  .section-title .icon{ font-size: 1.3rem; }
+  .about-text{
+    font-family: Arial, sans-serif;
+    color: var(--ink-soft);
+    max-width: 780px;
+    font-size: 1.02rem;
+  }
+
+  .bg-alt{ background: var(--cream-2); }
+
+  /* EXPERIENCE */
+  .exp-row{
+    display:grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .exp-row:last-child{ border-bottom: none; }
+  .exp-role{ font-weight: 700; font-size: 1.05rem; margin-bottom: 4px; }
+  .exp-org{ font-family: Arial, sans-serif; color: var(--ink-soft); font-size: 0.92rem; }
+  .exp-desc{ font-family: Arial, sans-serif; color: var(--ink-soft); font-size: 0.97rem; }
+
+  /* SERVICES */
+  .services-lede{ font-family: Arial, sans-serif; color: var(--ink-soft); margin-bottom: 28px; }
+  .service-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .service-card{
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 26px;
+  }
+  .service-icon{
+    width: 38px; height:38px;
+    border-radius: 9px;
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+  }
+  .service-icon.pink{ background: var(--rose); }
+  .service-icon.sage{ background: var(--sage); }
+  .service-icon.sky{ background: var(--sky); }
+  .service-card h3{ font-size: 1.05rem; margin-bottom: 8px; }
+  .service-card p{ font-family: Arial, sans-serif; color: var(--ink-soft); font-size: 0.92rem; }
+
+  /* FEATURED WORK */
+  .work-hero{
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .work-hero .img-wrap{
+    position: relative;
+    aspect-ratio: 16/7;
+    background: linear-gradient(135deg, var(--plum) 0%, #C79ABB 100%);
+    overflow:hidden;
+  }
+  .work-hero img{ width:100%; height:100%; object-fit: cover; }
+  .tag-chip{
+    position:absolute; top:16px; left:16px;
+    background: var(--plum-dark);
+    color:#fff;
+    font-family: Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight:600;
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  .work-hero .caption{ padding: 22px 26px; background:#fff; }
+  .work-hero .caption h3{ font-size: 1.15rem; margin-bottom: 8px; }
+  .work-hero .caption p{ font-family: Arial, sans-serif; color: var(--ink-soft); font-size: 0.95rem; }
+
+  .work-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+  .work-item{
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow:hidden;
+    background:#fff;
+  }
+  .work-item .thumb{
+    aspect-ratio: 4/3;
+    background: var(--clay);
+    overflow:hidden;
+  }
+  .work-item .thumb img{ width:100%; height:100%; object-fit:cover; }
+  .work-item .info{ padding: 18px 20px; }
+  .work-item h4{ font-size: 1rem; margin-bottom: 6px; color: var(--plum-dark); font-family:'Playfair Display', Georgia, serif; }
+  .work-item p{ font-family: Arial, sans-serif; color: var(--ink-soft); font-size: 0.9rem; }
+
+  /* SKILLS */
+  .skills-row{ display:flex; flex-wrap: wrap; gap: 12px; }
+  .skill-pill{
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 9px 18px;
+    border-radius: 999px;
+  }
+  .skill-pill.pink{ background: var(--rose); color:#8A3B57; }
+  .skill-pill.sage{ background: var(--sage); color:#2F5233; }
+  .skill-pill.sky{ background: var(--sky); color:#324A66; }
+  .skill-pill.clay{ background: var(--clay); color:#7A5A2A; }
+
+  /* TESTIMONIALS */
+  .testi-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .testi-card{
+    background:#fff; border:1px solid var(--border); border-radius: 12px; padding: 28px;
+  }
+  .stars{ color: #E0A93B; margin-bottom: 14px; font-size: 1.1rem; letter-spacing: 2px; }
+  .testi-card p{ font-family: Arial, sans-serif; color: var(--ink-soft); margin-bottom: 16px; }
+  .testi-card .author{ font-family: Arial, sans-serif; font-weight: 700; color: var(--ink); font-size: 0.92rem; }
+
+  /* FOOTER CTA */
+  footer{
+    background: var(--plum-dark);
+    color: #F3E8ED;
+    text-align:center;
+    padding: 70px 24px 30px;
+  }
+  footer h2{ color:#fff; font-size: 2rem; margin-bottom: 16px; }
+  footer p.lede{ font-family: Arial, sans-serif; color: #D9C0CE; max-width: 520px; margin: 0 auto 28px; }
+  footer .btn-primary{ background:#fff; color: var(--plum-dark); }
+  footer .btn-primary:hover{ background:#F3E8ED; }
+  .footer-bottom{
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #B98CA3;
+    margin-top: 50px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 24px;
+  }
+
+  @media (max-width: 860px){
+    .exp-row{ grid-template-columns: 1fr; gap: 10px; }
+    .service-grid, .work-grid{ grid-template-columns: 1fr; }
+    .testi-grid{ grid-template-columns: 1fr; }
+    nav{ display:none; }
+    .hero-card, .panel-card{ padding: 32px 26px; }
+    .hero-card h1{ font-size: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-name">Raynichelle Domingo</span>
+      <span class="badge"><span class="dot"></span>Available</span>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <div class="contact-bar">
+    <div class="contact-bar-inner">
+      <span class="contact-item"><span class="c-icon">&#9993;</span> <a href="mailto:hello.raynichelle@gmail.com">hello.raynichelle@gmail.com</a></span>
+      <span class="contact-item"><span class="c-icon">in</span> <a href="https://linkedin.com/in/raynichelle-domingo" target="_blank">linkedin.com/in/raynichelle-domingo</a></span>
+      <span class="contact-item"><span class="c-icon">&#128205;</span> Quezon City, Philippines</span>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-card">
+    <div class="pill-row">
+      <span class="pill pink">🛍️ Ecommerce Specialist</span>
+      <span class="pill grey">8+ Years</span>
+    </div>
+    <h1>I help ecommerce brands grow through strategy, design, and execution.</h1>
+    <p class="lede">A versatile ecommerce professional with 8+ years turning storefronts into revenue engines. From conversion optimization to brand experience, I partner with businesses to build shops customers love.</p>
+    <div class="btn-row">
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+      <a href="#work" class="btn btn-secondary">View My Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="panel" id="about">
+  <div class="panel-card">
+    <h2 class="section-title"><span class="icon">🙂</span> About Me</h2>
+    <p class="about-text">I'm a strategist and creative problem-solver based in Quezon City. I've spent the last decade helping ecommerce brands clarify their positioning, optimize their storefronts, and ship experiences that convert browsers into loyal customers. I believe great commerce happens at the intersection of clear thinking, beautiful design, and relentless execution.</p>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="panel bg-alt" id="experience">
+  <div class="panel-card">
+    <h2 class="section-title"><span class="icon">💼</span> Experience</h2>
+
+    <div class="exp-row">
+      <div>
+        <div class="exp-role">Head of Ecommerce</div>
+        <div class="exp-org">Horizon Digital — 2022–Present</div>
+      </div>
+      <div class="exp-desc">Led a full storefront redesign that increased qualified leads by 40%. Built and managed a cross-functional team delivering brand, content, and growth initiatives.</div>
+    </div>
+
+    <div class="exp-row">
+      <div>
+        <div class="exp-role">Senior Ecommerce Consultant</div>
+        <div class="exp-org">Thrive Partners — 2019–2022</div>
+      </div>
+      <div class="exp-desc">Advised 12+ SMEs on storefront strategy and digital transformation. Delivered an average 25% revenue lift within 6 months.</div>
+    </div>
+
+    <div class="exp-row">
+      <div>
+        <div class="exp-role">Creative Director</div>
+        <div class="exp-org">Spark Studio — 2017–2019</div>
+      </div>
+      <div class="exp-desc">Directed campaigns for consumer brands with combined reach of 5M+. Oversaw creative production from concept through launch.</div>
+    </div>
+
+    <div class="exp-row">
+      <div>
+        <div class="exp-role">Marketing Manager</div>
+        <div class="exp-org">NovaTech — 2015–2017</div>
+      </div>
+      <div class="exp-desc">Built the content marketing engine from scratch, growing organic traffic 3x in 12 months.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="panel" id="services">
+  <div class="panel-card">
+    <h2 class="section-title"><span class="icon">🧩</span> What I Can Do for Your Business</h2>
+    <p class="services-lede">Practical, results-driven services I'm focused on delivering right now.</p>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon pink">✉️</div>
+        <h3>Customer Support (Email)</h3>
+        <p>Responsive, professional email support that keeps your customers happy and coming back. I handle inquiries, resolve issues, and maintain your brand voice.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon sage">📦</div>
+        <h3>Product Listing</h3>
+        <p>Accurate, optimized product listings with compelling descriptions, proper categorization, and SEO-friendly titles that help shoppers find what they need.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon sky">🔍</div>
+        <h3>Product &amp; Market Research</h3>
+        <p>In-depth research on trending products, competitor positioning, and market gaps so you can make confident decisions about what to sell next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section class="panel bg-alt" id="work">
+  <div class="panel-card">
+    <h2 class="section-title"><span class="icon">📁</span> Featured Work</h2>
+
+    <div class="work-hero">
+      <div class="img-wrap">
+        <span class="tag-chip">★ Shopify Mockup</span>
+        <!-- REPLACE THIS IMAGE: swap the src below with your own photo -->
+        <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=1200&h=500&fit=crop" alt="Shopify store mockup">
+      </div>
+      <div class="caption">
+        <h3>Shopify Store Mockup</h3>
+        <p>A full Shopify storefront concept showcasing product pages, checkout flow, and branded visual identity — designed to feel warm, inviting, and easy to browse.</p>
+      </div>
+    </div>
+
+    <div class="work-grid">
+      <div class="work-item">
+        <div class="thumb">
+          <!-- REPLACE: DTC storefront image -->
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=400&fit=crop" alt="DTC storefront redesign">
+        </div>
+        <div class="info">
+          <h4>DTC Storefront Redesign</h4>
+          <p>Redesigned the full purchase flow for a DTC brand, resulting in a 32% increase in conversion rate.</p>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="thumb">
+          <!-- REPLACE: brand packaging image -->
+          <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&h=400&fit=crop" alt="Brand packaging rebrand">
+        </div>
+        <div class="info">
+          <h4>Brand Packaging Rebrand</h4>
+          <p>Guided a boutique brand through a complete rebrand — new packaging, visual identity, and launch campaign.</p>
+        </div>
+      </div>
+      <div class="work-item">
+        <div class="thumb">
+          <!-- REPLACE: market research image -->
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&h=400&fit=crop" alt="Market research framework">
+        </div>
+        <div class="info">
+          <h4>Market Research Framework</h4>
+          <p>Built a research playbook for an ecommerce startup, identifying growth opportunities and competitor gaps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="panel">
+  <div class="panel-card">
+    <h2 class="section-title"><span class="icon">⚡</span> Skills &amp; Tools</h2>
+    <div class="skills-row">
+      <span class="skill-pill pink">Shopify &amp; WooCommerce</span>
+      <span class="skill-pill sage">Conversion Optimization</span>
+      <span class="skill-pill sky">Product Merchandising</span>
+      <span class="skill-pill clay">Data Analytics</span>
+      <span class="skill-pill pink">Email Marketing</span>
+      <span class="skill-pill sage">Figma &amp; Adobe Suite</span>
+      <span class="skill-pill sky">SEO &amp; Paid Media</span>
+      <span class="skill-pill clay">Inventory Systems</span>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="panel bg-alt">
+  <div class="panel-card">
+    <h2 class="section-title"><span class="icon">💬</span> What Clients Say</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Raynichelle transformed our online store. The strategy was sharp, the execution was flawless, and the results spoke for themselves — 40% more revenue in the first quarter."</p>
+        <div class="author">— Maria Santos, CEO at Horizon Digital</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Working with Raynichelle felt like adding a senior team member. They understood our ecommerce business fast and delivered work that moved the needle immediately."</p>
+        <div class="author">— James Reyes, Founder at NovaTech</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contact">
+  <h2>Let's grow your store together.</h2>
+  <p class="lede">Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+  <a href="mailto:hello.raynichelle@gmail.com" class="btn btn-primary">Get in Touch</a>
+
+  <div class="contact-bar" style="margin-top: 40px; background: transparent; border-top: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12);">
+    <div class="contact-bar-inner" style="padding: 18px 24px;">
+      <span class="contact-item"><span class="c-icon">&#9993;</span> <a href="mailto:hello.raynichelle@gmail.com">hello.raynichelle@gmail.com</a></span>
+      <span class="contact-item"><span class="c-icon">in</span> <a href="https://linkedin.com/in/raynichelle-domingo" target="_blank">linkedin.com/in/raynichelle-domingo</a></span>
+      <span class="contact-item"><span class="c-icon">&#128205;</span> Quezon City, Philippines</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">© 2026 Raynichelle Domingo. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
