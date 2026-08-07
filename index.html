@@ -221,9 +221,10 @@
   .services-lede{ font-family: Arial, sans-serif; color: var(--ink-soft); margin-bottom: 28px; }
   .service-grid{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 22px;
   }
+  @media (max-width: 620px){ .service-grid{ grid-template-columns: 1fr; } }
   .service-card{
     background: #fff;
     border: 1px solid var(--border);
@@ -374,11 +375,12 @@
 <section class="hero-section">
   <div class="hero-card">
     <div class="pill-row">
-      <span class="pill pink">🛍️ Ecommerce Specialist</span>
+      <span class="pill pink">🛍️ Ecommerce Operations</span>
+      <span class="pill grey">🛡️ Trust & Safety</span>
       <span class="pill grey">8+ Years</span>
     </div>
-    <h1>I help ecommerce brands grow through strategy, design, and execution.</h1>
-    <p class="lede">A versatile ecommerce professional with 8+ years turning storefronts into revenue engines. From conversion optimization to brand experience, I partner with businesses to build shops customers love.</p>
+    <h1>I help ecommerce platforms run smoothly, safely, and with customers at the center.</h1>
+    <p class="lede">An ecommerce operations and trust & safety specialist with 8+ years supporting online marketplaces through customer support, content moderation, and policy compliance. I help platforms resolve high-risk cases, enforce policy consistently, and keep customer trust intact — all while meeting strict quality and SLA targets.</p>
     <div class="btn-row">
       <a href="#contact" class="btn btn-primary">Get in Touch</a>
       <a href="#work" class="btn btn-secondary">View My Work</a>
@@ -401,34 +403,42 @@
 
     <div class="exp-row">
       <div>
-        <div class="exp-role">Head of Ecommerce</div>
-        <div class="exp-org">Horizon Digital — 2022–Present</div>
+        <div class="exp-role">Customer Support Associate (Acting Team Lead)</div>
+        <div class="exp-org">HKR.Team — Nov 2024–Present</div>
       </div>
-      <div class="exp-desc">Led a full storefront redesign that increased qualified leads by 40%. Built and managed a cross-functional team delivering brand, content, and growth initiatives.</div>
+      <div class="exp-desc">Supervises a team of 9 support agents across order processing, customer support, and fulfillment, handling 50+ daily inquiries spanning payments, shipping, returns, and refunds. Leads quality assurance audits and coaching to improve policy compliance, and coordinates with third-party fulfillment partners to resolve inventory issues, chargebacks, and high-risk escalations.</div>
     </div>
 
     <div class="exp-row">
       <div>
-        <div class="exp-role">Senior Ecommerce Consultant</div>
-        <div class="exp-org">Thrive Partners — 2019–2022</div>
+        <div class="exp-role">Trust & Safety Associate</div>
+        <div class="exp-org">Accenture — Dec 2022–Jan 2024</div>
       </div>
-      <div class="exp-desc">Advised 12+ SMEs on storefront strategy and digital transformation. Delivered an average 25% revenue lift within 6 months.</div>
+      <div class="exp-desc">Reviewed and moderated user-generated content to ensure compliance with platform safety policies, identifying and escalating high-risk violations. Applied policy guidelines consistently across content formats and worked with cross-functional teams to resolve safety and compliance issues.</div>
     </div>
 
     <div class="exp-row">
       <div>
-        <div class="exp-role">Creative Director</div>
-        <div class="exp-org">Spark Studio — 2017–2019</div>
+        <div class="exp-role">Content Writer</div>
+        <div class="exp-org">Project SEO PH — Jan 2022–Jun 2022</div>
       </div>
-      <div class="exp-desc">Directed campaigns for consumer brands with combined reach of 5M+. Oversaw creative production from concept through launch.</div>
+      <div class="exp-desc">Created SEO-optimized content on blockchain and crypto topics, developing articles and digital assets that supported organic traffic growth and search visibility.</div>
     </div>
 
     <div class="exp-row">
       <div>
-        <div class="exp-role">Marketing Manager</div>
-        <div class="exp-org">NovaTech — 2015–2017</div>
+        <div class="exp-role">Quality Analyst</div>
+        <div class="exp-org">Alta Resources Philippines — Mar 2021–Jun 2022</div>
       </div>
-      <div class="exp-desc">Built the content marketing engine from scratch, growing organic traffic 3x in 12 months.</div>
+      <div class="exp-desc">Audited calls, chats, and emails covering shipping inquiries, returns, and policy compliance, improving CSAT by 3% by identifying gaps in order processing and customer communication. Delivered performance reports with actionable insights to improve service efficiency and resolution time.</div>
+    </div>
+
+    <div class="exp-row">
+      <div>
+        <div class="exp-role">Email and Chat CSR</div>
+        <div class="exp-org">Alta Resources Philippines — Apr 2017–Mar 2021</div>
+      </div>
+      <div class="exp-desc">Handled high-volume inquiries on orders, shipping, tracking, returns, and refunds while maintaining a 4.8/5 performance rating, providing accurate and timely resolutions that reduced repeat contacts.</div>
     </div>
 
   </div>
@@ -443,18 +453,23 @@
     <div class="service-grid">
       <div class="service-card">
         <div class="service-icon pink">✉️</div>
-        <h3>Customer Support (Email)</h3>
-        <p>Responsive, professional email support that keeps your customers happy and coming back. I handle inquiries, resolve issues, and maintain your brand voice.</p>
+        <h3>Customer Support (Email &amp; Chat)</h3>
+        <p>Responsive, professional support across orders, payments, shipping, returns, and refunds — resolving complex cases accurately while maintaining a positive customer experience.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon sage">📦</div>
-        <h3>Product Listing</h3>
-        <p>Accurate, optimized product listings with compelling descriptions, proper categorization, and SEO-friendly titles that help shoppers find what they need.</p>
+        <div class="service-icon clay">🛡️</div>
+        <h3>Trust &amp; Safety / Content Moderation</h3>
+        <p>Reviewing listings, content, and user-generated submissions against platform policy — flagging prohibited or offensive items, escalating high-risk violations, and helping keep marketplaces safe and compliant.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon sage">📋</div>
+        <h3>Case Management &amp; Escalations</h3>
+        <p>Handling high-volume, high-risk cases including chargebacks, disputes, and fulfillment issues, with sound policy enforcement and clear customer-focused resolutions.</p>
       </div>
       <div class="service-card">
         <div class="service-icon sky">🔍</div>
-        <h3>Product &amp; Market Research</h3>
-        <p>In-depth research on trending products, competitor positioning, and market gaps so you can make confident decisions about what to sell next.</p>
+        <h3>Quality Assurance &amp; Auditing</h3>
+        <p>Auditing calls, chats, and emails for policy compliance and service quality, with coaching and reporting that drives measurable improvements in CSAT and consistency.</p>
       </div>
     </div>
   </div>
@@ -467,45 +482,45 @@
 
     <div class="work-hero">
       <div class="img-wrap">
-        <span class="tag-chip">★ Shopify Mockup</span>
-        <!-- REPLACE THIS IMAGE: swap the src below with your own photo -->
-        <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=1200&h=500&fit=crop" alt="Shopify store mockup">
+        <span class="tag-chip">🚧 Coming Soon</span>
+        <!-- REPLACE THIS IMAGE: swap the src below with your own Shopify mockup screenshot once it's ready -->
+        <img src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?w=1200&h=500&fit=crop" alt="Shopify store mockup placeholder">
       </div>
       <div class="caption">
         <h3>Shopify Store Mockup</h3>
-        <p>A full Shopify storefront concept showcasing product pages, checkout flow, and branded visual identity — designed to feel warm, inviting, and easy to browse.</p>
+        <p>A full Shopify storefront concept currently in progress, showcasing product pages, checkout flow, and branded visual identity. Check back soon for the finished mockup.</p>
       </div>
     </div>
 
     <div class="work-grid">
       <div class="work-item">
         <div class="thumb">
-          <!-- REPLACE: DTC storefront image -->
-          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=400&fit=crop" alt="DTC storefront redesign">
+          <!-- REPLACE: swap for your own photo/screenshot related to content moderation or policy review -->
+          <img src="https://images.unsplash.com/photo-1577228159816-2ab72a38c22b?w=500&h=400&fit=crop" alt="Trust and safety content moderation">
         </div>
         <div class="info">
-          <h4>DTC Storefront Redesign</h4>
-          <p>Redesigned the full purchase flow for a DTC brand, resulting in a 32% increase in conversion rate.</p>
+          <h4>Trust &amp; Safety &amp; Content Moderation</h4>
+          <p>Reviewed user-generated content and product listings against platform safety policy, identifying and escalating high-risk and prohibited items to help protect platform integrity.</p>
         </div>
       </div>
       <div class="work-item">
         <div class="thumb">
-          <!-- REPLACE: brand packaging image -->
-          <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=500&h=400&fit=crop" alt="Brand packaging rebrand">
+          <!-- REPLACE: swap for your own team/ops photo -->
+          <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?w=500&h=400&fit=crop" alt="Ecommerce support operations team">
         </div>
         <div class="info">
-          <h4>Brand Packaging Rebrand</h4>
-          <p>Guided a boutique brand through a complete rebrand — new packaging, visual identity, and launch campaign.</p>
+          <h4>Ecommerce Support Operations</h4>
+          <p>Supervised a 9-person support team across order processing, fulfillment, and escalations, coordinating with fulfillment partners to resolve high-risk cases.</p>
         </div>
       </div>
       <div class="work-item">
         <div class="thumb">
-          <!-- REPLACE: market research image -->
-          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&h=400&fit=crop" alt="Market research framework">
+          <!-- REPLACE: swap for your own QA/audit-related photo -->
+          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&h=400&fit=crop" alt="Quality assurance audit framework">
         </div>
         <div class="info">
-          <h4>Market Research Framework</h4>
-          <p>Built a research playbook for an ecommerce startup, identifying growth opportunities and competitor gaps.</p>
+          <h4>Quality Assurance &amp; Audits</h4>
+          <p>Audited calls, chats, and emails for policy and quality compliance, improving CSAT by 3% through targeted coaching and reporting.</p>
         </div>
       </div>
     </div>
@@ -517,36 +532,33 @@
   <div class="panel-card">
     <h2 class="section-title"><span class="icon">⚡</span> Skills &amp; Tools</h2>
     <div class="skills-row">
-      <span class="skill-pill pink">Shopify &amp; WooCommerce</span>
-      <span class="skill-pill sage">Conversion Optimization</span>
-      <span class="skill-pill sky">Product Merchandising</span>
-      <span class="skill-pill clay">Data Analytics</span>
-      <span class="skill-pill pink">Email Marketing</span>
-      <span class="skill-pill sage">Figma &amp; Adobe Suite</span>
-      <span class="skill-pill sky">SEO &amp; Paid Media</span>
-      <span class="skill-pill clay">Inventory Systems</span>
+      <span class="skill-pill pink">Trust &amp; Safety Compliance</span>
+      <span class="skill-pill sage">Content Moderation</span>
+      <span class="skill-pill sky">Policy Enforcement</span>
+      <span class="skill-pill clay">Case Management</span>
+      <span class="skill-pill pink">Zendesk &amp; Salesforce</span>
+      <span class="skill-pill sage">Quality Assurance &amp; Auditing</span>
+      <span class="skill-pill sky">Incident Escalation</span>
+      <span class="skill-pill clay">Google Workspace</span>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- TESTIMONIALS (add real quotes here once available) -->
+<!--
 <section class="panel bg-alt">
   <div class="panel-card">
     <h2 class="section-title"><span class="icon">💬</span> What Clients Say</h2>
     <div class="testi-grid">
       <div class="testi-card">
         <div class="stars">★★★★★</div>
-        <p>"Raynichelle transformed our online store. The strategy was sharp, the execution was flawless, and the results spoke for themselves — 40% more revenue in the first quarter."</p>
-        <div class="author">— Maria Santos, CEO at Horizon Digital</div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p>"Working with Raynichelle felt like adding a senior team member. They understood our ecommerce business fast and delivered work that moved the needle immediately."</p>
-        <div class="author">— James Reyes, Founder at NovaTech</div>
+        <p>Quote goes here.</p>
+        <div class="author">— Name, Title at Company</div>
       </div>
     </div>
   </div>
 </section>
+-->
 
 <!-- FOOTER / CONTACT -->
 <footer id="contact">
